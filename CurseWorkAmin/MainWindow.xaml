@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurseWorkAmin"
         mc:Ignorable="d"
-        Title="Gardening" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Gardening" WindowStyle="None" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>
