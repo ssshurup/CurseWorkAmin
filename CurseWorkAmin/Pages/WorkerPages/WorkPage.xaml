@@ -1,0 +1,35 @@
+﻿<Page x:Class="CurseWorkAmin.Pages.WorkerPages.WorkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CurseWorkAmin.Pages.WorkerPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WorkPage" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="LeftBar">
+            <StackPanel>
+                <Button x:Name="NextStatusBT" FontSize="14" Content="Следующий этап"  Margin="10,10,10,0" Click="NextStatusBT_Click"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom">
+                <Button x:Name="BackBT" FontSize="14" Content="Назад" Margin="10" Click="BackBT_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="RightBar" Grid.Column="1" >
+            <DataGrid x:Name="OrderListDG" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Адрес" Width="150" Binding="{Binding land.address}"/>
+                    <DataGridTextColumn Header="Услуга" Width="150" Binding="{Binding services.name}"/>
+                    <DataGridTextColumn Header="Дата" Width="150" Binding="{Binding dateVisit}"/>
+                    <DataGridTextColumn Header="Статус" Width="150" Binding="{Binding status.name}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Page>
